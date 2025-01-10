@@ -7,8 +7,7 @@
     "UiPath.Excel.Activities": "[2.24.4]",
     "UiPath.System.Activities": "[24.10.7]",
     "UiPath.Testing.Activities": "[24.10.3]",
-    "UiPath.UIAutomation.Activities": "[24.10.10]",
-    "WorkDay.Descriptors1": "[1.0.2]"
+    "UiPath.UIAutomation.Activities": "[24.10.10]"
   },
   "webServices": [],
   "entitiesStores": [],
