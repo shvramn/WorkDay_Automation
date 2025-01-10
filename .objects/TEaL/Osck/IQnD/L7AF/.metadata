@@ -1,0 +1,13 @@
+﻿{
+  "Name": "DIV",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "L7AFPzqYXUasAJ_x9r2dgg",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/L7AFPzqYXUasAJ_x9r2dgg",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/IQnDmBH2JkC1mNIzuOrY_A",
+  "Created": "2025-01-09T22:36:13.5880819Z",
+  "Updated": "2025-01-09T22:36:13.5880819Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

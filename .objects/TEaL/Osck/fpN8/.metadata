@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Resume Upload",
+  "Type": "Screen",
+  "Id": "fpN8XZ-0pEyMg-b4ccz8WA",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/fpN8XZ-0pEyMg-b4ccz8WA",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/Osck3M56lECFi2wCnCp5gw",
+  "Created": "2025-01-09T22:36:13.641151Z",
+  "Updated": "2025-01-09T22:36:13.641151Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="6O71EMLlj02TcT6HZRu_qQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="gdit.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/USA-VA-Falls-Church---3150-Fairview-Park-Dr-(VAS095)/Robotics-Process-Automation--RPA--Developer_RQ190997-1/apply/autofillWithResume" DesignTimeRectangle="772, 441, 376, 58" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-role='alert' tag='DIV' visibleinnertext='You may have entered the wrong email address or password or your account might be locked.' /&gt;" Guid="9b530011-3345-4186-a695-237456e7c3c8" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f0641889cb921203afdcec86068b7048.png" xmlns="">0NSNjc3RaAkK8B391fXq8jA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

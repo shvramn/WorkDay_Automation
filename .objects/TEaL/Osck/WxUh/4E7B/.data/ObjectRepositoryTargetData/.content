@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="jpCPxJvaPEC8qPHAVdeMaw" Reference="Qbv0syoyRESqnJM-qg8wbA/4E7B5CGb6UKotJekdassVA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="fe14d43c-eeb9-4715-9c67-0bab2427e6b0" DesignTimeRectangle="608, 533, 344, 40" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='country--country' tag='BUTTON' visibleinnertext='*' /&gt;" Guid="c63fbf9d-d064-4c59-929a-9288716f8946" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="fe14d43c-eeb9-4715-9c67-0bab2427e6b0" CvElementArea="126, 53, 1480, 35" CvType="InputBox" DesignTimeRectangle="608, 508, 704, 21" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' tag='LABEL' class='css-1ud5i8o' aaname='' check:text='Country*' /&gt;" Guid="1f748bf0-62f8-490d-8ebd-6c45618cd0c3" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a80d092d408cb0b8f17e7cfc348c571d.png" xmlns="">0WRPTWfa6NEakMHSWw5Gx6Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

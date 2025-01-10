@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Verify New Password",
+  "Type": "Element",
+  "TaxonomyType": "Password",
+  "Id": "hXuswc3lcUqw0URCyyDzOg",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/hXuswc3lcUqw0URCyyDzOg",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/IQnDmBH2JkC1mNIzuOrY_A",
+  "Created": "2025-01-09T22:36:13.6322459Z",
+  "Updated": "2025-01-09T22:36:13.6322459Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

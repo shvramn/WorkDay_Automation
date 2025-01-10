@@ -1,0 +1,13 @@
+﻿{
+  "Name": "unchecked",
+  "Type": "Element",
+  "TaxonomyType": "Checkbox",
+  "Id": "gulsGId2-0endgSjrK1OUQ",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/gulsGId2-0endgSjrK1OUQ",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/IQnDmBH2JkC1mNIzuOrY_A",
+  "Created": "2025-01-09T22:36:13.624178Z",
+  "Updated": "2025-01-09T22:36:13.624178Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

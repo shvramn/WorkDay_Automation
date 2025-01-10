@@ -1,0 +1,15 @@
+﻿{
+  "Name": "Create Account",
+  "Type": "Screen",
+  "Id": "IQnDmBH2JkC1mNIzuOrY_A",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/IQnDmBH2JkC1mNIzuOrY_A",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/Osck3M56lECFi2wCnCp5gw",
+  "Created": "2025-01-09T22:36:13.5764197Z",
+  "Updated": "2025-01-09T22:36:13.5764197Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,11 @@
+﻿{
+  "Name": "WorkDay",
+  "Type": "App",
+  "Id": "TEaL2Tx5gEa6D9vF57NCmg",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/TEaL2Tx5gEa6D9vF57NCmg",
+  "Created": "2025-01-09T22:36:13.5527707Z",
+  "Updated": "2025-01-09T22:36:13.5527707Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

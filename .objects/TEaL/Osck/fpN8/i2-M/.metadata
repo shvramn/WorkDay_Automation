@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Click Open",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "i2-M9XytSUC4UkKYCw7I0Q",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/i2-M9XytSUC4UkKYCw7I0Q",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/fpN8XZ-0pEyMg-b4ccz8WA",
+  "Created": "2025-01-10T00:11:47.3419676Z",
+  "Updated": "2025-01-10T00:12:01.3076324Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Click Continue",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "ZH3_0VwIdkGirAVMcLhA4w",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/ZH3_0VwIdkGirAVMcLhA4w",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/fpN8XZ-0pEyMg-b4ccz8WA",
+  "Created": "2025-01-10T00:12:53.8931018Z",
+  "Updated": "2025-01-10T00:13:24.9122679Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

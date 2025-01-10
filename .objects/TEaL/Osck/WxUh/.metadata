@@ -1,0 +1,15 @@
+﻿{
+  "Name": "My Information",
+  "Type": "Screen",
+  "Id": "WxUhJg2cF0WQU-8cc_Pa2Q",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/WxUhJg2cF0WQU-8cc_Pa2Q",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/Osck3M56lECFi2wCnCp5gw",
+  "Created": "2025-01-10T00:19:32.9849357Z",
+  "Updated": "2025-01-10T00:19:44.3273298Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

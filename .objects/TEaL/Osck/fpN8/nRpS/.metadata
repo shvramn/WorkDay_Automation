@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Click Select file",
+  "Type": "Element",
+  "TaxonomyType": "Button",
+  "Id": "nRpS1vXIyUmQMEwEgipO_g",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/nRpS1vXIyUmQMEwEgipO_g",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/fpN8XZ-0pEyMg-b4ccz8WA",
+  "Created": "2025-01-09T22:36:13.6493428Z",
+  "Updated": "2025-01-09T22:36:13.6493428Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

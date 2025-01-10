@@ -1,0 +1,193 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Resume_Uploading" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Resume_Uploading_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Resume_Uploading" sap:VirtualizedContainerService.HintSize="1540,1277" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Resume Upload" sap:VirtualizedContainerService.HintSize="450,1254" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="488219db-c8c7-49b7-a2cd-d66276b56bda" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,1014" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Select file'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable CVScreenId="a275fc63-8e22-472a-b2e0-f1ca9b9ac12e" ContentHash="9bfwpfzzHUa02BXUpWD1Aw" CvTextArea="932, 702, 67, 14" CvTextArgument="Select file" CvType="Text" DesignTimeRectangle="925, 690, 82, 40" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl id='input-123' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-123' tag='BUTTON' type='button' class='css-1j9kiz4' aaname='Select file' check:text='Select file' /&gt;" Guid="8b0d76f3-4201-4a37-a49e-f754aa1974bb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFYAAAAsCAYAAAD/709QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAO3SURBVGhD7ZfvS9tAGMf9S/dPFGynpZWRF520UsXiQhdGGMjcCwcGQ1GxoGBHkSmzKMK6FopYXXWdWvXdd3eXS3/E1KTDZw52Lz7Q5u6Sbz69e+46dnt3D8XTo8QSocQSocQSocQSocQSocQSocQSocQSocQSocQSocQSocQSocQSocQSocQS8XfF1m1o4zFEUjbqfu0UXH+DvaAhyp8bM7F718L6HP+cgVXnfRqwUuz7eEp+fxpGFNtGpWDgdSLOgvBwcSSzS9g+8evrwxOLrVspkUOzGr7tnONlzck6NQvd3MQxE1ucZ/knMrD/FbHdkBMa0nkTuWkpOMFmwk//MQM8g9jPBpcWg172bycTOx99iReJVVR9GgdxA2j4eOxea6PIlxULnttqd69VLB3JCed6VNNhHco2P7EXR7C6S5WtgAUblQvZxrg8tJHT5A/IftCcdYRLdt0V1sUod8c4uHm9fbwifcQGZArD2Ied72ie3/g2DsJqU9YJmDRKqP7y68Nm0WpG9ImmdBj5WUzGeDgdRR7sgVj2UtP8nnFoCyb0mSkxNrKwJeTdnm4iLcZPsRViID3F+8aQ3mji5LAEO++soGR+DduHTU+WNqpfSlickWOWSrJPkNiATCEZrcbWNpFNOEE50WkDVrmBq26fA5hx1hZfxH7HuXZSmBV90xuth2K/LopZEX1/IMc3YQsRs1g/65WedEFKq6044+VL/lkpCBAbkKn/3o8x+qnguolKcQlpd3kyJuc2HVGuOB/Ey3vEumIe4rxkUH2kEBuUyXv/YYQX27nB+VkL5z96ZePqtARdzmAR3BWXYHV1hy29PnZrrM4OETup2wN9t3f2UGWb4XOKHZbJe/9hhBd7xuode2C3Xsrr23knuFjqnTJ0XhNZyOWa7NNpoFgoO/XJWwrKhhgbSa2gKkvHbWMLdtnZ7B6Ugvoasq80JM2yKD8UYoMyhWWEUtDG7jtZyOMZ5ExW2LPuzuketu9RtZzNKzKREn1yKV4yNCxXWbtXbKcmNwq52Zk6NH6a0NhL8fZHNi/+rMst3XkWP6N+2sO5yDnIyGKDMoVktBrbaWG//w8C2zknMwZs9zglkH8i+CbGwyUyMHbcGecRy2FHG9vIICpmOr+fOfCHY+C4Fe8dt0Q7l5CVbZm13j37GFks7xOQKQyjb16KUIQW+yb/1pkZ/zFJVt/93PihZiwRSiwRSiwRSiwRSiwRSiwRSiwRSiwRSiwRSiwRSiwRSiwRSiwRSiwRSiwJ9/gN76peq6uDVNcAAAAASUVORK5CYII=" InformativeScreenshot="9221f810e16a8b898e8d0edacbf94eee.png" Reference="Qbv0syoyRESqnJM-qg8wbA/nRpS1vXIyUmQMEwEgipO_g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="a275fc63-8e22-472a-b2e0-f1ca9b9ac12e" CvTextArea="932, 702, 67, 14" CvTextArgument="Select file" CvType="Text" DesignTimeRectangle="933, 702, 66, 17" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='input-123' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='input-123' tag='SPAN' type='' class='css-pplshs' aaname='Select file' check:text='Select file' /&gt;" Guid="b12be9ab-398c-41ed-8349-311eb92ca9ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAVCAYAAAD7NJjdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANBSURBVFhH7Vbfa9pQGN3/LFSxojLykBVTtExccGGEQaF76KBhQdqioFBHKGtZxVKYKEip7Wzn2tr27ez+jCbGZh2WPiwPB/R+3/1+nHu/c/Pq7v4BEWYRETMHETFzEBEzB4slpmdDWUogptroBdmfAzc/YJcUxGnehIn9+yF21uhvDVaP+vRhqeT/kir+/x18xIzQqhh4k06RQDR4Cpn8Bhqn0z6PYMHE9CyV1aFY/UA7xcmmwmvNFqCbVZwQYmpvSf1JDfaiiHGTJBXkyiaKK4KgNDmJX96NgXgBYr4atOkEdCfYvgBiZAAFn07k2gg1ei1J4mJ95K61LB2ZJF+PKzqstrAFEXN5DMu96uQGlmy0LoWN4Kpto6iIAyAHUrSOcUXWZcMuDMfdwyHr9fv4iQggJqQmiiliyGzmeYKM0UTnt9dRovdFYz5xVYdRLmA5QYPrqNHAM8SQolZozBSUkgl9Ncv2xkp11vzdWRU5tj9LbqiBXJb6JpDbHeC03YRd5jc4U95Goz3w1TJC51sT66tiz0ZT+IQRE1KTgFdjulXk0zwRRXzFgOX0ce36HMFMEVtqHYdjvnZaKTDf3O5wlpjv6+xU4h+PxP4BbNZIATvnk9HNVUTT3S2+XxT5b6MUQkxITTKuT3wJbgZo1TaQk9ebYHmtyhuVjQeAFe8jRjY2C15kmD48BzFhNcm4E2LGt7g4H+Li561rvD5rQhc3iCWWjaeJruyRqzuF/S7RmTnELOu2x7exd4AOEfOXJGZeTTLuhJhzMu9kg6sXYr1R5onZqIwd6FQTSJLNrvAZ91GrOHw+/aPkGGxvTN1CR4zeXb8O2+FiPTNKvW3kXyvImA4b3+cgJqwmialRGmH/gxCilIaiSYQpL5Vbfiw9oGNx8Y0lVeZTVOnIKdjsELufmHFXCJ0Qa1OHQl8zhRRF7Y+IL811Vdd5LvqN8vkAF6xOL55MTFhNAl6NGQ9xOP2BR5R7WTNgy+eYQXwEUhGmwdMajD154j5iKMjTaBsa4uym0Xim54PR81ynJs81s9Mm8sKmbU9iTuHJxFCfkJooZsU3AoNLzLvye34y/zEyRN9miIngRUTMHETEzEFETCAe8Acs8DU8atNoEAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Enter File Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="488219db-c8c7-49b7-a2cd-d66276b56bda" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="gdit.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/USA-VA-Falls-Church---3150-Fairview-Park-Dr-(VAS095)/Robotics-Process-Automation--RPA--Developer_RQ190997-1/apply/autofillWithResume" CVScreenId="34e38873-e5f2-4614-9635-395f03d605ab" ContentHash="KZm6aNln3kuYYQ78YUTFkw" DesignTimeRectangle="201, 741, 322, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlid='1148' idx='1' /&gt;" Guid="f2e6020d-ee43-4c21-980e-991d29f49c96" InformativeScreenshot="d98e1840844d296040f122c814a1c466.png" IsResponsive="True" Reference="Qbv0syoyRESqnJM-qg8wbA/hNKsZkk670GWeYhP_-OKuw" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="34e38873-e5f2-4614-9635-395f03d605ab" CvTextArea="137, 741, 55, 12" CvTextArgument="File name:" CvType="Text" DesignTimeRectangle="138, 740, 54, 15" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='1090' title='File &amp;amp;name:' check:text='File &amp;amp;name:' /&gt;" Guid="b65b5df0-60f6-47a7-bf93-2fee0b35da5a" SearchSteps="Selector, FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <uix:NTypeInto.VerifyOptions>
+                <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionTypeIntoOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionTypeIntoOptions.Retry>
+                  <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                </uix:VerifyExecutionTypeIntoOptions>
+              </uix:NTypeInto.VerifyOptions>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Open'" sap:VirtualizedContainerService.HintSize="382,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="gdit.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/USA-VA-Falls-Church---3150-Fairview-Park-Dr-(VAS095)/Robotics-Process-Automation--RPA--Developer_RQ190997-1/apply/autofillWithResume" CVScreenId="0b14534b-6cc0-4a62-bde6-422395b1ac8c" ContentHash="GVwEl4w7QkGR_AAwA6GteA" DesignTimeRectangle="555, 765, 88, 26" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;" Guid="c62e76df-2f22-471b-8ebd-3b2d5f810427" InformativeScreenshot="abf44ee03c51ef0909fc05fb47d0a1c0.png" Reference="Qbv0syoyRESqnJM-qg8wbA/i2-M9XytSUC4UkKYCw7I0Q" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='#32770' title='Open' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Click Continue'" sap:VirtualizedContainerService.HintSize="382,218" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="gdit.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/USA-VA-Falls-Church---3150-Fairview-Park-Dr-(VAS095)/Robotics-Process-Automation--RPA--Developer_RQ190997-1/apply/autofillWithResume" CVScreenId="a8fd9fa4-6758-40bd-bce4-efc3d05e5642" ContentHash="IKl5Wfh4HUmhoWcW-bCrEg" DesignTimeRectangle="1352, 776, 96, 40" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Continue' /&gt;" Guid="db80bcfc-c220-4fa5-be5f-8a84f06bea6f" InformativeScreenshot="5955da6d79ae77e8f0c5d15b4e84f6e3.png" Reference="Qbv0syoyRESqnJM-qg8wbA/ZH3_0VwIdkGirAVMcLhA4w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="Selector" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-1928, -8, 1936, 1048" BrowserType="Chrome" ContentHash="SecmKdFPgkGdHPpZFByFEw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAGoSURBVDhPlVE/SAJxGDWEhoiMxghslCaXWmuo/aCloUFaWiJuamgQpLFyCYIaUoL+gCQZlJCkRQiZ0A1dYhRGFlRkl9hpd+fZ1Qu+H6dnQ8Pj933v9773vfudzTCMpqjeH3CqMO8DqjfbntpH3tlMZyG0q1W+vOGSysFuoxHKKR/4UosOs75uGAKzGCn0p+QgTCuhgRz4SmREMJuwYYh/h3+2194u3cQTMEQLlKOJMPFM8BkdTeASG4lrBEwoCS1hl2rK6weo/wtIimX0qE1F/wErLvLv7nj2pS5+My73KjvNHLvond3P2SZDBgTopbLqQA9490Qf6YYWjxPgYI6eGXiC5wFcrCXvPOhxkoF77lAgHfpOfldiPRVh4ZHDJYzQkyFtRCJER80tJ62/kSLjU9DjxGZ/7JoHj0Tm2mIA0DZKg2/Hm6BGImxGTe9kMcAABNiMk14bacwwz7BC1/WWs9vnfgwCHdM7xUKh0AWMrZxsET+1mV7SNM0OPTNQFKW1VCq1Q9wzE3mAcHghGstkMi5RFPvW4+lxMginspwkSQ5Zlts0TbN/A7zlvw3vsLHGAAAAAElFTkSuQmCC" InformativeScreenshot="27ba6e1caa43f87d34fdb1b98e133d13.jpg" Reference="Qbv0syoyRESqnJM-qg8wbA/fpN8XZ-0pEyMg-b4ccz8WA" Selector="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" Title="Robotics Process Automation (RPA) Developer" Url="https://gdit.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/USA-VA-Falls-Church---3150-Fairview-Park-Dr-(VAS095)/Robotics-Process-Automation--RPA--Developer_RQ190997-1/apply/autofillWithResume?source=AppFeeder-Indeed" Version="V1" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
