@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Creating_Account" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Creating_Account_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Creating_Account" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Creating_Account_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -39,6 +39,7 @@
       <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
       <x:String>System.ComponentModel</x:String>
       <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -87,27 +88,47 @@
       <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Creating_Account" sap:VirtualizedContainerService.HintSize="1540,2910" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Creating_Account" sap:VirtualizedContainerService.HintSize="1560,4192" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="UserEmailAddress" />
+      <Variable x:TypeArguments="x:String" Name="UserPassWord" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Create Account" sap:VirtualizedContainerService.HintSize="1560,3969" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="e874d3f9-e02a-45d1-81d9-7f309db18944" Version="V2">
+    <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="WorkDay_Credentials" CacheStrategy="None" DisplayName="Get Credential" FolderPath="WorkDayAutomation" sap:VirtualizedContainerService.HintSize="1560,175" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Username="[UserEmailAddress]">
+      <ui:GetRobotCredential.Password>
+        <OutArgument x:TypeArguments="ss:SecureString">
+          <VisualBasicReference x:TypeArguments="ss:SecureString" ExpressionText="UserPassWord" sap2010:WorkflowViewState.IdRef="VisualBasicReference`1_1" />
+        </OutArgument>
+      </ui:GetRobotCredential.Password>
+    </ui:GetRobotCredential>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Create Account" sap:VirtualizedContainerService.HintSize="1560,3994" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="IfNotOpen" ScopeGuid="e874d3f9-e02a-45d1-81d9-7f309db18944" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1526,3752" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1526,3754" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1492,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1492,286" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[UserEmailAddress]" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable CVScreenId="dc8a0302-9440-41e1-b7c3-5e601fc77c88" ContentHash="prupy7iAeEqN1G0szq3sqw" CvElementArea="721, 442, 476, 54" CvType="InputBox" DesignTimeRectangle="724, 444, 470, 50" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='input-4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-4' tag='INPUT' type='text' class='css-1sl00q5' aaname='Email Address' /&gt;" Guid="4faef1a6-41d3-498e-a55d-92dc1bf43f70" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdoAAAA2CAYAAABgFVjiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG9SURBVHhe7dk9SsRgGIVR921hJdgJFjYDNoKFG7CxcgUWMiK4Eqf45MokxB9Uorc7B24xQ/qHNzkYAECN0AJAkdACQNGn0N4/PI7N5fU4Ojkbh8enZmZm9sPSzLQzDf3oXWhvbu/G+cXV2D49j5fdbv8vAPCdNDPtTEPT0qU5tKlwHhBYAFgnDU1Ll5ftHNqcvKkxALBeWpqmTubQ5v2yaxYA/iYtTVMnc2jzMRcA+LtlU4UWAP6Z0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQNGXoT06ORsvu93+FwCwRlqapk7m0G4ur8f26Xn/CwBYIy1NUydzaO8fHsf5xZWrFgBWSkPT0jR1Moc2bm7v3h5IjQUXAH4nzUw709C0dOldaCMVzsmb98v5mGtmZmbfL81MO5eX7ORTaAGA/zLGK1CPuR2D9oJCAAAAAElFTkSuQmCC" InformativeScreenshot="04dcf9a49d7bd76ee9b4e417296cf9b8.png" Reference="HiduqNe9RUCtnaqWxhWfGw/DsioG9JRT0SREv4iz2l25A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -128,7 +149,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1492,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1492,286" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[UserPassWord]" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable CVScreenId="dc8a0302-9440-41e1-b7c3-5e601fc77c88" ContentHash="ekXYKCg66kKsw4WAp0itWw" CvElementArea="721, 552, 476, 54" CvType="InputBox" DesignTimeRectangle="724, 554, 470, 50" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='input-5' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-5' tag='INPUT' type='password' class='css-1sl00q5' aaname='Password' /&gt;" Guid="6a4794e7-5e86-44f9-a1a5-da1b8f4dd7cd" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdoAAAA2CAYAAABgFVjiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG9SURBVHhe7dk9SsRgGIVR921hJdgJFjYDNoKFG7CxcgUWMiK4Eqf45MokxB9Uorc7B24xQ/qHNzkYAECN0AJAkdACQNGn0N4/PI7N5fU4Ojkbh8enZmZm9sPSzLQzDf3oXWhvbu/G+cXV2D49j5fdbv8vAPCdNDPtTEPT0qU5tKlwHhBYAFgnDU1Ll5ftHNqcvKkxALBeWpqmTubQ5v2yaxYA/iYtTVMnc2jzMRcA+LtlU4UWAP6Z0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQNGXoT06ORsvu93+FwCwRlqapk7m0G4ur8f26Xn/CwBYIy1NUydzaO8fHsf5xZWrFgBWSkPT0jR1Moc2bm7v3h5IjQUXAH4nzUw709C0dOldaCMVzsmb98v5mGtmZmbfL81MO5eX7ORTaAGA/zLGK1CPuR2D9oJCAAAAAElFTkSuQmCC" InformativeScreenshot="146fba007bbe18b9db1bc1dbab437923.png" Reference="HiduqNe9RUCtnaqWxhWfGw/E5t4kFN6y0i7Ww549Cm7Mg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -149,7 +170,7 @@
                 </uix:VerifyExecutionTypeIntoOptions>
               </uix:NTypeInto.VerifyOptions>
             </uix:NTypeInto>
-            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Verify New Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1492,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Version="V4">
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Verify New Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1492,286" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[UserPassWord]" Version="V4">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable CVScreenId="dc8a0302-9440-41e1-b7c3-5e601fc77c88" ContentHash="H9z5i4sgC0-NxSz7fEwAfQ" CvElementArea="721, 662, 475, 54" CvType="InputBox" DesignTimeRectangle="724, 664, 470, 50" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='input-6' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-6' tag='INPUT' type='password' class='css-1sl00q5' aaname='Verify New Password' /&gt;" Guid="7ebc2730-c6c1-45ac-96e8-e2057f9d1691" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAdoAAAA2CAYAAABgFVjiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG9SURBVHhe7dk9SsRgGIVR921hJdgJFjYDNoKFG7CxcgUWMiK4Eqf45MokxB9Uorc7B24xQ/qHNzkYAECN0AJAkdACQNGn0N4/PI7N5fU4Ojkbh8enZmZm9sPSzLQzDf3oXWhvbu/G+cXV2D49j5fdbv8vAPCdNDPtTEPT0qU5tKlwHhBYAFgnDU1Ll5ftHNqcvKkxALBeWpqmTubQ5v2yaxYA/iYtTVMnc2jzMRcA+LtlU4UWAP6Z0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQJHQAkCR0AJAkdACQNGXoT06ORsvu93+FwCwRlqapk7m0G4ur8f26Xn/CwBYIy1NUydzaO8fHsf5xZWrFgBWSkPT0jR1Moc2bm7v3h5IjQUXAH4nzUw709C0dOldaCMVzsmb98v5mGtmZmbfL81MO5eX7ORTaAGA/zLGK1CPuR2D9oJCAAAAAElFTkSuQmCC" InformativeScreenshot="4f0f7d585bb48ae6ebf1ad9a19d1f76c.png" Reference="HiduqNe9RUCtnaqWxhWfGw/hXuswc3lcUqw0URCyyDzOg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
@@ -190,9 +211,9 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <uix:NCheckState DisplayName="Check App State 'Sign in to this account…'" sap:VirtualizedContainerService.HintSize="1492,2418" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e874d3f9-e02a-45d1-81d9-7f309db18944" Version="V4">
+            <uix:NCheckState DisplayName="Check App State 'Sign in to this account…'" sap:VirtualizedContainerService.HintSize="1492,2420" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="e874d3f9-e02a-45d1-81d9-7f309db18944" Version="V4">
               <uix:NCheckState.IfExists>
-                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="988,2176" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="988,2178" sap2010:WorkflowViewState.IdRef="Sequence_5">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -213,7 +234,7 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_6" Version="V4">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_6" Text="[UserEmailAddress]" Version="V4">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable CVScreenId="0c930348-2f8c-4d61-a8be-88a5b0254583" ContentHash="A9qjcaXR7kmBpwBxhXbKAw" CvElementArea="777, 463, 381, 44" CvType="InputBox" DesignTimeRectangle="780, 465, 376, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='input-180' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-180' tag='INPUT' type='text' class='css-1sl00q5' aaname='Email Address' /&gt;" Guid="5e1b4d70-faaf-4be9-ad4b-09904a293d6f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXwAAAAsCAYAAABmHgOJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFZSURBVHhe7dgxbsJAAETR3DtNmhRUKbgCHR2noKDgEAhxBKg2mghbIOUC9rwnTQHe+q/ljwFABcEHKPEW/Mv1Nnb7w/jabMfn94+ZmS1waXhanqa/moOfBzl0PJ3H/fF4/gvA0qThaXma/hr9Ofi5DXIAgHVI09P2yRz83ATe7AHWI01P2ydz8PPdB4B1eW274AOsmOADlBB8gBKCD1BC8AFKCD5ACcEHKCH4ACUEH6CE4AOUEHyAEoIPUELwAUoIPkAJwQcoIfgAJQQfoITgA5QQfIASgg9QQvABSgg+QAnBBygh+AAlBB+ghOADlBB8gBKCD1BC8AFKCD5ACcEHKPFv8L8223F/PJ6/AFi6ND1tn8zB3+0P43g6P38BsHRpeto+mYN/ud7+boIc8KYPsFxpeFqepqftkzn4kQe5DXIo333MzGx5S8PT8tfYx1vwAVgvwQeoMMYvTPCxzgvuh0AAAAAASUVORK5CYII=" InformativeScreenshot="ecf920f426f22cce359876cf01b43c18.png" Reference="HiduqNe9RUCtnaqWxhWfGw/3kRB5CflXE-1dS2bCYPY2w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -234,7 +255,7 @@
                       </uix:VerifyExecutionTypeIntoOptions>
                     </uix:NTypeInto.VerifyOptions>
                   </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_7" Version="V4">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="954,286" sap2010:WorkflowViewState.IdRef="NTypeInto_7" Text="[UserPassWord]" Version="V4">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable CVScreenId="0c930348-2f8c-4d61-a8be-88a5b0254583" ContentHash="brhHcMFZU0y0ATuSA3aaMw" CvElementArea="777, 551, 381, 44" CvType="InputBox" DesignTimeRectangle="780, 553, 376, 40" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='input-181' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-181' tag='INPUT' type='password' class='css-1sl00q5' aaname='Password' /&gt;" Guid="94dbde53-8514-470d-9605-131635f03bb5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXwAAAAsCAYAAABmHgOJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFZSURBVHhe7dgxbsJAAETR3DtNmhRUKbgCHR2noKDgEAhxBKg2mghbIOUC9rwnTQHe+q/ljwFABcEHKPEW/Mv1Nnb7w/jabMfn94+ZmS1waXhanqa/moOfBzl0PJ3H/fF4/gvA0qThaXma/hr9Ofi5DXIAgHVI09P2yRz83ATe7AHWI01P2ydz8PPdB4B1eW274AOsmOADlBB8gBKCD1BC8AFKCD5ACcEHKCH4ACUEH6CE4AOUEHyAEoIPUELwAUoIPkAJwQcoIfgAJQQfoITgA5QQfIASgg9QQvABSgg+QAnBBygh+AAlBB+ghOADlBB8gBKCD1BC8AFKCD5ACcEHKPFv8L8223F/PJ6/AFi6ND1tn8zB3+0P43g6P38BsHRpeto+mYN/ud7+boIc8KYPsFxpeFqepqftkzn4kQe5DXIo333MzGx5S8PT8tfYx1vwAVgvwQeoMMYvTPCxzgvuh0AAAAAASUVORK5CYII=" InformativeScreenshot="b234546c94f587c00fa53394417e0065.png" Reference="HiduqNe9RUCtnaqWxhWfGw/aJZt-2ORsUmeQrwvp4HMcg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -270,15 +291,15 @@
                       </uix:VerifyExecutionOptions>
                     </uix:NClick.VerifyOptions>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="Check App State 'Incorrect Credentials'" sap:VirtualizedContainerService.HintSize="954,1092" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="e874d3f9-e02a-45d1-81d9-7f309db18944" Version="V4">
+                  <uix:NCheckState DisplayName="Check App State 'Incorrect Credentials'" sap:VirtualizedContainerService.HintSize="954,1094" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="e874d3f9-e02a-45d1-81d9-7f309db18944" Version="V4">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,850" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,852" sap2010:WorkflowViewState.IdRef="Sequence_9">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_8" Version="V4">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email Address'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_8" Text="[UserEmailAddress]" Version="V4">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable CVScreenId="0c930348-2f8c-4d61-a8be-88a5b0254583" ContentHash="A9qjcaXR7kmBpwBxhXbKAw" CvElementArea="777, 463, 381, 44" CvType="InputBox" DesignTimeRectangle="780, 465, 376, 40" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='input-180' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-180' tag='INPUT' type='text' class='css-1sl00q5' aaname='Email Address' /&gt;" Guid="5e1b4d70-faaf-4be9-ad4b-09904a293d6f" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXwAAAAsCAYAAABmHgOJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFZSURBVHhe7dgxbsJAAETR3DtNmhRUKbgCHR2noKDgEAhxBKg2mghbIOUC9rwnTQHe+q/ljwFABcEHKPEW/Mv1Nnb7w/jabMfn94+ZmS1waXhanqa/moOfBzl0PJ3H/fF4/gvA0qThaXma/hr9Ofi5DXIAgHVI09P2yRz83ATe7AHWI01P2ydz8PPdB4B1eW274AOsmOADlBB8gBKCD1BC8AFKCD5ACcEHKCH4ACUEH6CE4AOUEHyAEoIPUELwAUoIPkAJwQcoIfgAJQQfoITgA5QQfIASgg9QQvABSgg+QAnBBygh+AAlBB+ghOADlBB8gBKCD1BC8AFKCD5ACcEHKPFv8L8223F/PJ6/AFi6ND1tn8zB3+0P43g6P38BsHRpeto+mYN/ud7+boIc8KYPsFxpeFqepqftkzn4kQe5DXIo333MzGx5S8PT8tfYx1vwAVgvwQeoMMYvTPCxzgvuh0AAAAAASUVORK5CYII=" InformativeScreenshot="ecf920f426f22cce359876cf01b43c18.png" Reference="Qbv0syoyRESqnJM-qg8wbA/3kRB5CflXE-1dS2bCYPY2w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>
@@ -299,7 +320,7 @@
                             </uix:VerifyExecutionTypeIntoOptions>
                           </uix:NTypeInto.VerifyOptions>
                         </uix:NTypeInto>
-                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_9" Version="V4">
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="416,286" sap2010:WorkflowViewState.IdRef="NTypeInto_9" Text="[UserPassWord]" Version="V4">
                           <uix:NTypeInto.Target>
                             <uix:TargetAnchorable CVScreenId="0c930348-2f8c-4d61-a8be-88a5b0254583" ContentHash="brhHcMFZU0y0ATuSA3aaMw" CvElementArea="777, 551, 381, 44" CvType="InputBox" DesignTimeRectangle="780, 553, 376, 40" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;webctrl id='input-181' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='input-181' tag='INPUT' type='password' class='css-1sl00q5' aaname='Password' /&gt;" Guid="94dbde53-8514-470d-9605-131635f03bb5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAXwAAAAsCAYAAABmHgOJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAFZSURBVHhe7dgxbsJAAETR3DtNmhRUKbgCHR2noKDgEAhxBKg2mghbIOUC9rwnTQHe+q/ljwFABcEHKPEW/Mv1Nnb7w/jabMfn94+ZmS1waXhanqa/moOfBzl0PJ3H/fF4/gvA0qThaXma/hr9Ofi5DXIAgHVI09P2yRz83ATe7AHWI01P2ydz8PPdB4B1eW274AOsmOADlBB8gBKCD1BC8AFKCD5ACcEHKCH4ACUEH6CE4AOUEHyAEoIPUELwAUoIPkAJwQcoIfgAJQQfoITgA5QQfIASgg9QQvABSgg+QAnBBygh+AAlBB+ghOADlBB8gBKCD1BC8AFKCD5ACcEHKPFv8L8223F/PJ6/AFi6ND1tn8zB3+0P43g6P38BsHRpeto+mYN/ud7+boIc8KYPsFxpeFqepqftkzn4kQe5DXIo333MzGx5S8PT8tfYx1vwAVgvwQeoMMYvTPCxzgvuh0AAAAAASUVORK5CYII=" InformativeScreenshot="b234546c94f587c00fa53394417e0065.png" Reference="Qbv0syoyRESqnJM-qg8wbA/aJZt-2ORsUmeQrwvp4HMcg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                               <uix:TargetAnchorable.Anchors>

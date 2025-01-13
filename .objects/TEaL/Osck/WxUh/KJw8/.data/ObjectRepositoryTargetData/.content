@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="twgB9frOBUqE37OkKLWlMw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="gdit.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/USA-VA-Falls-Church---3150-Fairview-Park-Dr-(VAS095)/Robotics-Process-Automation--RPA--Developer_RQ190997-1/apply/autofillWithResume" CVScreenId="bd2b389f-c162-49fe-b426-0e8c5fc3e3ef" CvElementArea="606, 556, 347, 42" CvType="InputBox" DesignTimeRectangle="608, 557, 344, 40" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='address--countryRegion' tag='BUTTON' type='button' class='css-1pq833f' aaname='Georgia' check:innerText='Georgia' /&gt;" Guid="313146d3-a42d-4f64-ab13-86eedb8879e6" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="bd2b389f-c162-49fe-b426-0e8c5fc3e3ef" CvTextArea="606, 534, 45, 14" CvTextArgument="State *" CvType="Text" DesignTimeRectangle="608, 534, 43, 17" FuzzySelectorArgument="&lt;webctrl aaname='State' parentid='root' tag='SPAN' type='' class='' check:innerText='State*' /&gt;" Guid="cae6e9b8-eb08-4fec-804c-907bd4571169" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1775d16b628c9a81d7673baddd448534.png" xmlns="">0p_YJNC8qm0iJtxl7SSFnNQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

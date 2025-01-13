@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Select State",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "hZc3iLXCgEOa_Q6cBpDIog",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/hZc3iLXCgEOa_Q6cBpDIog",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/WxUhJg2cF0WQU-8cc_Pa2Q",
+  "Created": "2025-01-11T01:03:20.0492075Z",
+  "Updated": "2025-01-11T01:03:34.7415462Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

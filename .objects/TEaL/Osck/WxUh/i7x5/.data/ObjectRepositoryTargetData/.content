@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="xxuKSgR7D0ytPC_EhF_wcA" Reference="Qbv0syoyRESqnJM-qg8wbA/i7x5Eo3lK0-A45JEIleB3A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="gdit.wd5.myworkdayjobs.com/en-US/External_Career_Site/job/USA-VA-Falls-Church---3150-Fairview-Park-Dr-(VAS095)/Robotics-Process-Automation--RPA--Developer_RQ190997-1/apply/autofillWithResume" CVScreenId="6c9450be-2df2-4873-be0a-0191bdcf4a51" DesignTimeRectangle="608, 333, 344, 40" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl id='source--source' tag='BUTTON' type='button' class='css-vdx8v8' aaname='NSBE' check:innerText='NSBE' /&gt;" Guid="604bc31d-3488-4969-840c-45a76d8cb02e" ImageBase64="" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Robotics Process Automation (RPA) Developer' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="6c9450be-2df2-4873-be0a-0191bdcf4a51" CvTextArea="607, 310, 197, 14" CvTextArgument="How Did You Hear About Us? *" CvType="Text" DesignTimeRectangle="608, 310, 196, 17" FuzzySelectorArgument="&lt;webctrl aaname='How Did You Hear About Us?' parentid='root' tag='SPAN' type='' class='' check:innerText='How Did You Hear About Us?*' /&gt;" Guid="380bebeb-a9a1-4ab6-acf8-72a83c157b22" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="2e51f6769de2f3e9ec82d78d0bdcbeb6.png" xmlns="">0sfecPwCcfU2BH1SNFsksFg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

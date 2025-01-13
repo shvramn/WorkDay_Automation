@@ -1,0 +1,16 @@
+﻿{
+  "Name": "Click Country Name",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "wlbvHSJWbkOxjEex3S3pdg",
+  "Reference": "Qbv0syoyRESqnJM-qg8wbA/wlbvHSJWbkOxjEex3S3pdg",
+  "ParentRef": "Qbv0syoyRESqnJM-qg8wbA/WxUhJg2cF0WQU-8cc_Pa2Q",
+  "Created": "2025-01-11T00:54:00.2023769Z",
+  "Updated": "2025-01-11T00:54:16.7432251Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
